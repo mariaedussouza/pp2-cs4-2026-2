@@ -1,8 +1,14 @@
-import * as repository from "../repositories/customerRepository";
-import type { Customer } from "@prisma/client"; // Mude aqui para pegar do prisma correto
-import type { CreateCustomerDto } from "../dto/customer/createCustomerDto";
-import type { UpdateCustomerDto } from "../dto/customer/updateCustomerDto";
-import { NotFoundError } from "../errors/NotFoundError";
+
+import * as repository from "../repositories/customerRepository.ts";
+
+
+import type { Customer } from "../generated/prisma/client.ts";
+import type { CreateCustomerDto } from "../dto/customer/createCustomerDto.ts";
+import type { UpdateCustomerDto } from "../dto/customer/updateCustomerDto.ts";
+
+
+import { NotFoundError } from "../errors/NotFoundError.ts";
+
 
 export async function findAll(): Promise<Customer[]> {
  return repository.findAll();
@@ -10,7 +16,7 @@ export async function findAll(): Promise<Customer[]> {
 
 
 export async function findById(
- id: string
+ id: number
 ): Promise<Customer> {
  const customer = await repository.findById(id);
 
@@ -49,6 +55,5 @@ export async function remove(
 
 
  return repository.remove(id);
-
 }
 

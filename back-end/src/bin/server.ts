@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-import app from "../types/app";
+import app from "../app";
 import chalk from "chalk";
 import { createServer } from "http";
 import { ExpressError } from "../types/error";

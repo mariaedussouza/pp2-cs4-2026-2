@@ -1,15 +1,17 @@
 {
- "compilerOptions": {
-   "module": "ESNext",
-   "moduleResolution": "bundler",
-   "target": "ES2023",
-   "outDir": "./dist",
-   "strict": true,
-   "esModuleInterop": true,
-   "forceConsistentCasingInFileNames": true,
-   "ignoreDeprecations": "6.0",
-   "skipLibCheck": true
- }
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "target": "ES2023",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "ignoreDeprecations": "6.0",
+    "skipLibCheck": true
+  }
 }
 
 

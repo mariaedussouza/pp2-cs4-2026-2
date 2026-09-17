@@ -1,3 +1,4 @@
+
 import type {
  Request,
  Response,
@@ -5,11 +6,11 @@ import type {
 } from "express";
 
 
-import * as service from "../services/customerService";
+import * as service from "../services/customerService.ts";
 
 
-import type { CreateCustomerDto } from "../dto/customer/createCustomerDto";
-import type { UpdateCustomerDto } from "../dto/customer/updateCustomerDto";
+import type { CreateCustomerDto } from "../dto/customer/createCustomerDto.ts";
+import type { UpdateCustomerDto } from "../dto/customer/updateCustomerDto.ts";
 
 
 type CustomerIdParams = {
@@ -126,3 +127,4 @@ export async function remove(
    next(error);
  }
 }
+
